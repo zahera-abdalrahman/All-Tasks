@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        hr{
+            margin:30px 0;
+        }
+        /* Task(1) */
+        #yellow{
+            border: 1px solid black;
+            width: 300px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+
+        /* Task(2) */
+        img{
+        width: 300px;
+        height: 200px;
+        display: block;
+        margin-top: 30px;
+        }
+
+        /* Task(3) */
+        span{
+            color: red;
+        }
+        #submit{
+            margin-top: 30px;
+        }
+
+        /* Task(4) */
+        .container{
+            border: 1px solid black;
+            max-width: 450px;
+            margin-bottom: 2rem;
+        }
+        .header-lorem{
+            display: flex;
+            justify-content: space-between;
+            padding:0 10px;
+            align-items: center;
+            background-color: #ececec;
+        }
+        .show-btn,.hide-btn{
+            border: none;
+            background-color: transparent;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .show-btn:hover,.hide-btn:hover{
+            color: purple;
+        }
+        .body-lorem{
+            padding:0 10px;
+            display: none;
+        }
+        .body-lorem p{
+            color: grey;
+        }
+        /* Task(5) */
+        textarea{
+            margin-top: 20px;
+        }
+
+        /* Task(6) */
+        #colors{
+            width: 300px;
+            height: 300px;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+        <!-- Task(1) -->
+        <div id="yellow">
+            <p>Hello World!</p>
+        </div>
+
+        <hr>
+
+        <!-- Task(2) -->
+        <select name="country" id="country">
+            <option value="Palestine">Palestine</option>
+            <option value="Spain">Spain</option>
+            <option value="Brazil">Brazil</option>
+        </select>
+    
+        <img src="images/palestine.jpg" alt="" id="flag">
+
+        <hr>
+        <!-- Task(3) -->
+        <table>
+            <tr>
+                <td><label for="">Password (min 6 characters): </label></td>
+                <td><input type="password" id="password"> <span></span></td>
+            </tr>
+            <tr>
+                <td><label for="">Repeat password: </label></td>
+                <td><input type="password" id="repeat"> <span id="equal"></span></td>
+            </tr>
+        </table>
+        <button id="submit">Submit</button>
+
+        <hr>
+
+        <!-- Task(4) -->
+        <div class="container">
+            <div class="header-lorem">
+                <h2>What is Lorem Ipsum?</h2>
+                <button class="show-btn">show</button>
+            </div>
+            <div class="body-lorem">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <div>
+                    <button class="hide-btn">Hide</button>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="container">
+            <div class="header-lorem">
+                <h2>Why do we use it?</h2>
+                <button class="show-btn">show</button>
+            </div>
+            <div class="body-lorem">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                <div>
+                    <button class="hide-btn">Hide</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container">
+            <div class="header-lorem">
+                <h2>Where does it come from?</h2>
+                <button class="show-btn">show</button>
+            </div>
+            <div class="body-lorem">
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, </p>
+                <div>
+                    <button class="hide-btn">Hide</button>
+                </div>
+            </div>
+            
+        </div>
+
+        <hr>
+        <!-- Task(5) -->
+        <div>
+        <select name="font-type" id="fontType">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+        </select>
+
+        <input type="number" name="font-size" id="fontSize" value="20">
+
+        <label>Italic</label><input type="checkbox" name="italic" id="italic">
+        <label>Bold</label><input type="checkbox" name="bold" id="bold">
+        <label>Underline</label><input type="checkbox" name="underline", id="underline">
+        
+    </div>
+    <textarea class="text" id="text" rows="10" cols="60">The quick brown fox jumps over the lazy dog</textarea>
+    <hr>
+
+    <!-- Task(6) -->
+    <div id="colors"></div>
+    <body>
+    
+
+    <script>
+        // Task(1)
+        let yellow=document.getElementById("yellow");
+        yellow.addEventListener('mouseover',function(){
+            yellow.style.background="yellow";
+            document.getElementsByTagName("p")[0].style.fontWeight="bold"
+        });
+        yellow.addEventListener('mouseout',function(){
+            yellow.style.background="transparent";
+            document.getElementsByTagName("p")[0].style.fontWeight="300"
+        });
+
+
+        //Task(2)
+
+        let country=document.getElementById("country");
+        let flagImage=document.getElementById("flag");
+
+
+        country.addEventListener('change',function(){
+            let countryName=country.value;
+            if(countryName==="Palestine")
+        {
+            flagImage.src='images/palestine.jpg'
+        }
+        else if(countryName==="Spain")
+        {
+            flagImage.src='images/spain.png'
+        }
+        else if(countryName==="Brazil")
+        {
+            flagImage.src='images/brazil.png'
+        }
+        });
+
+
+        //Task(3)
+        let password=document.getElementById("password");
+        let repeatPassword=document.getElementById("repeat");
+        let comment=document.querySelector("span");
+        let equal=document.getElementById("equal");
+        let submit=document.getElementById("submit");
+
+
+
+        password.addEventListener("input", function(){
+            if(password.value.length < 6){
+                comment.innerHTML="Too Short";
+            }
+            else
+            {
+                comment.innerHTML="";
+            }
+        });
+
+
+        repeatPassword.addEventListener("input", function(){
+            if(password.value != repeatPassword.value){
+                equal.innerHTML="The two passwords don't match";
+            }
+            else
+            {
+                equal.innerHTML="";
+            }
+        });
+
+
+        submit.addEventListener('click', function () {
+            if (password.value.length >= 6 && password.value === repeatPassword.value) {
+                alert("Submit successful");
+            } else {
+                alert("Submit failed. Please check the password conditions.");
+            }
+        });
+
+
+        //Task(4)
+        let show=document.querySelectorAll(".show-btn");
+        let hide=document.querySelectorAll(".hide-btn");
+        let bodyLorem=document.querySelectorAll(".body-lorem");
+
+        show.forEach(function (button, index) {
+            button.addEventListener('click', function () {
+            bodyLorem[index].style.display = "block";
+            });
+        });
+
+
+        hide.forEach(function (button, index) {
+            button.addEventListener('click', function () {
+            bodyLorem[index].style.display = "none";
+            });
+        });
+
+        //Task(5)
+        let fontType=document.getElementById("fontType");
+        let fontSize=document.getElementById("fontSize");
+        let italic=document.getElementById("italic");
+        let bold=document.getElementById("bold");
+        let underline=document.getElementById("underline");
+
+        let text=document.getElementById("text");
+
+        fontType.addEventListener('change', function(){
+            text.style.fontFamily = fontType.value;
+        });
+
+        text.style.fontSize = fontSize.value + 'px';
+        fontSize.addEventListener('input', function () {
+            text.style.fontSize = Math.max(10, fontSize.value) + 'px';
+        });
+
+        italic.addEventListener('change', function(){
+            if(italic.checked){
+                text.style.fontStyle = 'italic';
+            }else{
+                text.style.fontStyle = 'normal';
+            }
+        });
+
+
+        bold.addEventListener('change', function(){
+            if(bold.checked){
+                text.style.fontWeight = 'bold';
+            }else{
+                text.style.fontWeight = 'normal';
+            }
+        });
+
+
+        underline.addEventListener('change', function(){
+            if(underline.checked){
+                text.style.textDecoration = 'underline';
+            }else{
+                text.style.textDecoration = 'none';
+            }
+        });
+
+
+
+        //Task(6)
+
+        document.addEventListener('DOMContentLoaded', function () {
+            let colors = document.getElementById("colors");
+            let arrayColors = ['red', 'blue', 'yellow', 'pink', 'orange', 'green'];
+
+            function changeColor() {
+                var randomColor = Math.floor(Math.random() * arrayColors.length);
+                colors.style.backgroundColor = arrayColors[randomColor];
+            }
+
+            changeColor();
+
+            setInterval(changeColor, 2000);
+        });
+    </script>
+</body>
+</html>

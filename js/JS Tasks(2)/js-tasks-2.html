@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CTRL+U</h1>
+    <!-- Task 2 -->
+    <p id="shape"></p>
+    
+    <!-- Task 3 -->
+    <p id="numbers"></p>
+
+
+    <!-- Task 8 -->
+    <h1 id="name"></h1>
+    <h1 id="nameTwo"></h1>
+    <script>
+        // Task 1
+        var birthday=prompt("Enter your Birthday Month: ");
+    switch(birthday){
+        case "1":alert("January");break;
+        case "2":alert("February");break;
+        case "3":alert("March");break;
+        case "4":alert("April");break;
+        case "5":alert("May");break;
+        case "6":alert("June");break;
+        case "7":alert("July");break;
+        case "8":alert("August");break;
+        case "9":alert("September");break;
+        case "10":alert("October");break;
+        case "11":alert("November");break;
+        case "12":alert("December");break;
+        default:alert("Enter your birthday again");
+    }
+    // Task 2
+    let n = 4;
+    let string = "";
+    let counter=1;
+    for (let i = 1; i <= n; i++) {
+    for (let j = 0; j < i; j++) {
+        string +=counter;
+        counter++;
+    }
+    string += "<br>";
+    }
+    console.log(string);
+
+    document.getElementById("shape").innerHTML=string;
+    // Task 3
+
+    var string1="";
+    for(let i=1;i<=1000;i++)
+        {
+            if(i%13===0)
+            {
+                string1+=i+" ";
+            }
+        }
+        console.log(string1);
+
+        document.getElementById("numbers").innerHTML=string1;
+
+        // Task 4
+        let num1=prompt("Enter number one: ");
+        let num2=prompt("Enter number two: ");
+        function multiplication2(num1,num2) {
+            return num1*num2;
+        }
+
+        alert(multiplication2(num1,num2));
+
+
+
+
+        let multiplication2arrow = (num1,num2) => {
+            return num1*num2;
+        }
+
+        alert(multiplication2arrow(num1,num2));
+
+    //Task 5
+    let base=prompt("Enter triangle base: ");
+    let height=prompt("Enter triangle height: ");
+    function triangle(base,height) {
+        let area= 0.5 * base * height;
+        return area;
+    }
+
+    alert(triangle(base,height));
+
+
+    let triangleArrow=(base,height) => {
+        let area= 0.5 * base * height;
+        return area;
+    }
+    alert(triangleArrow(base,height));
+
+    // Task 6
+    let seriesOfNumber=prompt("Enter a number: ");
+    let arrayNumber=Array.from(String(seriesOfNumber),Number);
+
+    for (let i = 0; i <= 9; i++) {
+        if (!arrayNumber.includes(i))
+        {
+        console.log(`number ${i} is missing`);
+        }
+    
+    }
+
+    //Task 7
+    let drink=prompt("Enter your favourite drink: ");
+    switch(drink)
+    {
+        case "banana":alert("The price of a banana drink is 40 dollars");break;
+        case "orange":alert("The price of a orange drink is 20 dollars");break;
+        case "milkshake":alert("The price of a milkshake drink is 60 dollars");break;
+        case "apple":alert("The price of a apple drink is 54 dollars");break;
+        case "cherry":alert("The price of a cherry drink is 25 dollars");break;
+        default:alert("This item is not on the list");
+    }
+    // Task 8
+    let firstName=prompt("firstName: ");
+let lastName=prompt("lastName: ");
+let stringName="";
+function fullName(firstName,lastName) {
+    stringName=`${firstName} ${lastName}`
+    console.log(stringName);
+    document.getElementById("name").innerHTML=stringName;
+}
+fullName(firstName,lastName);
+
+let fullNameArrow=(firstName,lastName) => {
+    stringName=`${firstName} ${lastName}`
+    console.log(stringName);
+    document.getElementById("nameTwo").innerHTML=stringName;
+}
+
+fullNameArrow(firstName,lastName);
+    </script>
+</body>
+</html>
